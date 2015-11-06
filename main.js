@@ -50,7 +50,10 @@ var server = http.createServer(function (req, res){
           var string = requestArray[1];
           res.write( '\n' + util.stringCounter(string) + '\n');
           res.end();
+          break;
 
+      default: res.write('\n' + 'invalid address!');
+      res.end();
     // Show the HTML for the Google homepage.
     }
 })
