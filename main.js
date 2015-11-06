@@ -17,8 +17,8 @@ var server = http.createServer(function (req, res){
 
       case 'sum':
           requestArray.shift();
-          console.log('The sum is: ' + util.add(requestArray));
-          res.write('\n' + 'the sum is: ' + util.add(requestArray));
+          console.log('The sum is: ' + util.add(requestArray) + '\n');
+          res.write('\n' + 'the sum is: ' + util.add(requestArray)  + '\n');
           res.end();
           break;
 
@@ -26,7 +26,7 @@ var server = http.createServer(function (req, res){
       case 'squared' :
           var number = requestArray[1];
           console.log(util.cubed);
-          res.write('\n' + number + ' squared is ' + util.square(number));
+          res.write('\n' + number + ' squared is ' + util.square(number)  + '\n');
           res.end();
           break;
 
@@ -34,7 +34,7 @@ var server = http.createServer(function (req, res){
       case 'cubed' :
           var number  = requestArray[1];
           console.log(util.cubed);
-          res.write('\n' + number + ' cubed is ' + util.cubed(number));
+          res.write('\n' + number + ' cubed is ' + util.cubed(number)  + '\n');
           res.end();
           break;
 
@@ -42,9 +42,9 @@ var server = http.createServer(function (req, res){
       case 'gravatar' :
           var address = requestArray[1];
           console.log(util.gravatar(address));
-          res.write( util.gravatar(address));
+          res.write( util.gravatar(address)  + '\n');
           res.end();
-
+          break;
 
       case 'sentence' :
           var string = requestArray[1];
